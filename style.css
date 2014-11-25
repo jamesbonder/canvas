@@ -5,9 +5,31 @@ body {
 #board {
 	margin: 0 auto;
 	width:100%;
-	height:100%;  
+	height:750px;  
+	overflow:hidden;
+	overflow-y:hidden;
 }
  
 #canvas {  
-    cursor:crosshair;      
+    cursor:crosshair;  
+    background:url('lined_paper.png') repeat;  
+}
+
+#selectColor{
+width:150px;
+margin-left:2%;
+margin-right:50%;
+}
+
+#selectRadius{
+width:150px;
+margin-left:2%;
+margin-right:50%;
+margin-top:5px;
+}
+
+.pickerwrapper{
+	width:100%;
+	position:absolute;
+	top:15px;
 }

@@ -9,9 +9,10 @@
 </head>
 <body>
 <div id="board">
-<canvas id="canvas" width="1500px" height="600px">
+<canvas id="canvas" width="1350px" height="750px">
         Sorry, your browser doesn't support canvas technology.
 </canvas>
+<div class="pickerwrapper">
 <select id="selectColor">
     <option id="colBlack" value="black" selected="selected">Black</option>
     <option id="colRed" value="red">Red</option>
@@ -20,6 +21,16 @@
     <option id="colOrange" value="orange">Orange</option>
     <option id="colYellow" value="yellow">Yellow</option>
 </select>
+
+<select id="selectRadius">
+    <option id="rad7" value="7" selected="selected">7</option>
+    <option id="rad2" value="2">2</option>
+    <option id="rad5" value="5">5</option>
+    <option id="rad10" value="10">10</option>
+    <option id="rad15" value="15">15</option>
+    <option id="rad20" value="20">20</option>
+</select>
+</div>
 </p>
 </div><!-- END board -->
 </body>

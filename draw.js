@@ -4,11 +4,12 @@ window.onload = function() {
 
   var curColor = $('#selectColor option:selected').val();
 
+  var curRadius = $('#selectRadius option:selected').val()
+
     if(myCanvas){
     var isDown  = false;
     var ctx = myCanvas.getContext("2d");
     var canvasX, canvasY;
-    ctx.lineWidth = 10;
                                  
     $(myCanvas)
         .mousedown(function(e){
@@ -25,6 +26,9 @@ window.onload = function() {
         canvasY = e.pageY - myCanvas.offsetTop;
         ctx.lineTo(canvasX, canvasY);
         ctx.strokeStyle = curColor;
+        ctx.lineWidth = curRadius;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
         ctx.stroke();
     }
  })
@@ -36,6 +40,10 @@ window.onload = function() {
                  
     $('#selectColor').change(function () {
         curColor = $('#selectColor option:selected').val();
+   });
+
+    $('#selectRadius').change(function () {
+        curRadius = $('#selectRadius option:selected').val();
    });
                 
 };
